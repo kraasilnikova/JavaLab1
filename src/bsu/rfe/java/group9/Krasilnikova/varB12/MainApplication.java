@@ -19,14 +19,31 @@ public class MainApplication
             {
                 breakfast[itemsSoFar] = new Apple(parts[1]);
             }
+            if (parts[0].equals("Beef"))
+            {
+                breakfast[itemsSoFar] = new Beef(parts[1]);
+            }
             itemsSoFar++;
         }
-        for (Food item: breakfast) //перебор всех элементов массива
+            Arrays.sort(breakfast, new FoodComparator());
+        for (Food item: breakfast)
             if (item!=null)
-                item.consume(); //если элемент не null – употребить продукт
+            {
+                item.consume();
+                System.out.println(item.calculateCalories() + " калорий");
+            } else
+                break;
+
+        double CaloriesCounter=0;
+        for (Food item: breakfast)
+        {
+            if (item!=null)
+                CaloriesCounter += item.calculateCalories();
             else
                 break;
-        System.out.println("Всего хорошего!");
+        }
+        System.out.println("Общая кaлорийность завтрака = " + CaloriesCounter + " калорий");
+        System.out.println("\n" + "Всего хорошего!");
     }
 }
 
