@@ -2,7 +2,7 @@ package bsu.rfe.java.group9.Krasilnikova.varB12;
 
 public class Cheese extends Food
 {
-    Double calories = null;
+    private Double calories = null;
     public Cheese()
     {
         super("Сыр");
