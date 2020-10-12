@@ -1,6 +1,6 @@
 package bsu.rfe.java.group9.Krasilnikova.varB12;
 
-public abstract class Food implements Consumable
+public abstract class Food implements Consumable, Nutritious
 {
     String name = null;
     public Food(String name)

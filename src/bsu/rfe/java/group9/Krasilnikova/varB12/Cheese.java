@@ -7,10 +7,11 @@ public class Cheese extends Food
     {
         super("Сыр");
     }
-    public void consume() {
+    public void consume()
+    {
         System.out.println(this + " съеден");
     }
-    public Double CalculateCalories()
+    public Double calculateCalories()
     {
         if(this.name == "Сыр")
         {

@@ -1,6 +1,6 @@
 package bsu.rfe.java.group9.Krasilnikova.varB12;
 
-public class Apple extends Food
+public class Apple extends Food implements Nutritious
 {
     private String size; //из-за создания нового поля нужно переопределить методы equals и toString
     private Double calories = null;
