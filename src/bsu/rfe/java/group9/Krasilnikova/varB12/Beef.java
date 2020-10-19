@@ -24,7 +24,7 @@ public class Beef extends Food
     }
     public Double calculateCalories()
     {
-        if(readiness.equals("с_кровью"))
+        if(readiness.equals("с кровью"))
         {
             calories = 216.0;
         }

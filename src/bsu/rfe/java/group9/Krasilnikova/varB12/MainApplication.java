@@ -42,6 +42,45 @@ public class MainApplication
             else
                 break;
         }
+
+        int apple =0;
+        Food Apple = new Apple("большое");
+        Food Apple1 = new Apple("среднее");
+        Food Apple2 = new Apple("маленькое");
+        for (Food item: breakfast)
+        {
+            if (item!=null)
+            {
+                if(item.equals(Apple) || item.equals(Apple1) || item.equals(Apple2))
+                    apple++;
+            }
+        }
+        System.out.println("\n" + "Яблок количеством: " + apple + " съедено.");
+        int cheese = 0;
+        Food Cheese = new Cheese();
+        for (Food item: breakfast)
+        {
+            if (item!=null)
+            {
+                if(item.equals(Cheese))
+                    cheese++;
+            }
+        }
+        System.out.println("Сыра количеством: " + cheese + " съедено.");
+        int beef = 0;
+        Food Beef = new Beef("с кровью");
+        Food Beef1 = new Beef("прожаренное");
+        Food Beef2 = new Beef("норма");
+        for (Food item: breakfast)
+        {
+            if (item!=null)
+            {
+                if(item.equals(Beef) || item.equals(Beef1) || item.equals(Beef2))
+                    beef++;
+            }
+        }
+        System.out.println("Мяса количеством: " + beef + " съедено.");
+
         System.out.println("Общая кaлорийность завтрака = " + CaloriesCounter + " калорий");
         System.out.println("\n" + "Всего хорошего!");
     }
